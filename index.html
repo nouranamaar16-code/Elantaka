@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Commerce Hub / جامعة طنطا </title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+    
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F5EF;
+    color: #243247;
+    line-height: 1.8;
+}
+
+/* الهيدر */
+header {
+    background-color: #142640;
+    color: #F7F5EF;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 4px solid #C8AA6E;
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+    color: #E4D8BC;
+}
+
+/* قسم الأرشيف وأدوات البحث بالتاريخ */
+.archive-search-section {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-right: 4px solid #c8aa6e;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.search-box, .archive-dropdown-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.search-box label, .archive-dropdown-box label {
+    font-weight: 600;
+    color: #243247;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* المحتوى الأساسي */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* الترحيب */
+.welcome {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-right: 5px solid #C8AA6E;
+    border-radius: 8px;
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    color: #142640;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.welcome p {
+    color: #5E6877;
+}
+
+/* قسم المواد */
+.subjects h2 {
+    color: #142640;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #D8C69E;
+    padding-bottom: 8px;
+}
+
+.subjects-container {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 22px; }
+        
+.subject-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E7E1D5;
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: 0.3s ease; }
+        
+.subject-card:hover {
+     border-color: #C8AA6E;
+    transform: translateY(-4px); }
+        
+.subject-icon {
+    font-size: 35px;
+    margin-bottom: 12px; }
+        
+.subject-card h3 {
+    color: #142640;
+    font-size: 19px;
+    margin-bottom: 10px; }
+        
+.subject-card p {
+    color: #687386;
+    font-size: 14px;
+    margin-bottom: 20px; }
+        
+.subject-card a {
+    display: inline-block;
+    background-color: #142640;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 5px;
+    font-size: 14px; }
+        
+.subject-card a:hover {
+    background-color: #C8AA6E;
+     color: #142640; }
+        
+        /* تنسيق الموبايل والتابلت */
+        
+ @media (max-width: 850px) {
+    .subjects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }  }
+        
+ @media (max-width: 520px) {
+    .subjects-container {
+    grid-template-columns: 1fr; }
+        
+.subject-card {
+     padding: 22px 16px;} }
+        
+        </style>
+</head>
+<body>
+
+    <header>
+        <h1>Commerce Hub</h1>
+        <p>قسم المحاسبة و التكنولوجيا المالية</p>
+        <p>جامعة طنطا</p>
+    </header>
+
+ <main>
+
+         <!-- صندوق البحث -->
+        <section class="archive-search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="date-search">البحث بتاريخ اليوم:</label>
+                    <input type="date" id="date-search" class="date-input">
+                    <button type="button" id="search-btn" class="search-btn">بحث</button>
+                    <button type="button" id="reset-btn" class="reset-btn">عرض الكل</button>
+                </div>
+            </div>
+        </section>
+       
+    <section class="welcome">
+        <h2>أهلا بكم في Commerce Hub</h2>
+        <p>مكان واحد يجمع المحاضرات والملفات الدراسية والمواد الخاصة بالترم الأول</p>
+    </section>
+
+    <section class="subjects">
+        <h2> الترم الأول  / المواد الدراسية</h2>
+     <div class="subjects-container">
+      <div class="subject-card">
+        <div class="subject-icon">💡📊</div>
+            <h3>الأحصاء الوصفي</h3>
+            <p>المحاضرات و السكاشن والتطبيقات</p>
+            <a href="statistics.html">استكشف المادة</a>
+        </div>
+
+         <div class="subject-card">
+          <div class="subject-icon">🎯📦</div>
+             <h3>مبادئ التسوسق</h3>
+             <p>المحاضرات و السكاشن و التطبيقات</p>
+             <a href="marketing.html">استكشف المادة</a>    
+          </div>
+
+          <div class="subject-card">
+             <div class="subject-icon">🔒🏥</div>
+             <h3>الخطر و التأمين</h3>
+             <p>المحاضرات و السكاشن والتطبيقات</p>
+             <a href="insurance.html">استكشف المادة</a>
+          </div>
+
+          <div class="subject-card">
+             <div class="subject-icon">💰</div>
+             <h3>اقتصاديات النقود والمصارف</h3>
+             <p>المحاضرات و السكاشن والتطبيقات</p>
+             <a href="money-banking.html">استكشف المادة</a>
+          </div>
+
+          <div class="subject-card">
+             <div class="subject-icon">📑👓</div>
+             <h3>المحاسبة المتوسطة</h3>
+             <p>المحاضرات و السكاشن والتطبيقات المحاسبية</p>
+             <a href="intermediate-accounting.html">استكشف المادة</a>
+          </div>
+
+          <div class="subject-card">
+             <div class="subject-icon">💻</div>
+             <h3>نظم المعلومات المحاسبية</h3>
+             <p>المحاضرات و السكاشن والتطبيقات المحاسبية</p>
+             <a href="accounting-information-system.html">استكشف المادة</a>
+          </div>
+
+     </div>
+    </section>
+ </main>
+    
+          <!-- كود التشغيل والتحكم التلقائي بالبحث -->
+<script>
+        // زر البحث
+     document.getElementById('search-btn').addEventListener('click', function() {
+    const inputDate = document.getElementById('date-search').value; // صيغته YYYY-MM-DD
+            
+    if (!inputDate) {
+      alert('من فضلكِ اختاري تاريخاً أولاً المربع!');
+    return;
+     }
+
+    const rows = document.querySelectorAll('.lecture-row');
+    let found = false;
+
+         rows.forEach(row => {
+    const rowDate = row.querySelector('.lecture-date').textContent.trim();
+                
+                // مقارنة التاريخ المختار بالتاريخ المكتوب في الجدول مباشرة
+    if (rowDate === inputDate) {
+        row.style.display = ''; // اظهر المحاضرة المطابقة
+        found = true;
+        } 
+    else { row.style.display = 'none'; // اخفي باقي المحاضرات
+        }
+     });
+
+    if (!found) {
+        alert('لا توجد محاضرات مرفوعة في هذا التاريخ المحدد.');
+                // إعادة إظهار الجدول تلقائياً
+        rows.forEach(row => row.style.display = '');
+     }
+    });
+
+        // زر إعادة تعيين وعرض الكل
+        document.getElementById('reset-btn').addEventListener('click', function() {
+        document.getElementById('date-search').value = '';
+    const rows = document.querySelectorAll('.lecture-row');
+          rows.forEach(row => row.style.display = '');
+        });
+</script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

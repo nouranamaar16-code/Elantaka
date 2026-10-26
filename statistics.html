@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>الأحصاء الوصفي| Commerce Hub</title>
+        <link rel="stylesheet" href="../index.html">
+
+<style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f5ef;
+    color: #243247;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+ }
+          
+header {
+    background-color: #142640;
+    color: #F7F5EF;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 4px solid #C8AA6E;
+ }
+          
+header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+ }
+          
+header p {
+    font-size: 16px;
+    color: #E4D8BC;
+ }
+          
+          /* حاوية المحتوى الرئيسي */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+ }
+          
+          /* رابط الرجوع للخلف */
+.back-navigation {
+    margin-bottom: 20px;
+ }
+          
+.back-link {
+    color: #142640;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
+ }
+          
+          
+.back-link:hover {
+    color: #805ad5;
+ }
+         
+          /* بطاقة مادة الإحصاء الوصفي */
+.subject-intro-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+ }
+                 
+.back-link:hover {
+    color: #805ad5;
+ }
+        
+        /* التنسيق البنفسجي للمادة المقتبس من كودك */
+.math-bg { 
+    background: linear-gradient(135deg, #9fbd7f, #747859); 
+ }
+  
+.math-border { 
+  border-right: 6px solid #aac390; 
+ }
+          
+.subject-header {
+    padding: 25px;
+    color: #ffffff;
+ }
+          
+.subject-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+ }
+          
+.subject-header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+ }
+          
+.subject-body {
+    padding: 25px;
+    background-color: #ffffff;
+    color: #5e6877;
+    font-size: 15px;
+ }
+          
+          
+          /* حقول الإدخال */
+.date-input, .archive-select {
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #243247;
+   outline: none;
+   width: 50%;
+   background-color: #f8fafc;
+   transition: border-color 0.2s ease;
+}
+          
+.date-input:focus, .archive-select:focus {
+    border-color: #805ad5;
+    background-color: #ffffff;
+}
+          
+          /* زر البحث */
+.search-btn {
+    padding: 10px 20px;
+    background-color: #798580;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+ }
+          
+ .search-btn:hover {
+    background-color: #805ad5;
+ }
+          
+          /* تنسيق جداول المحاضرات */
+.stas-bg { background: linear-gradient(135deg, #9fbd7f, #747859); } .chem-bg { background: #e74c3c; } .calc-bg { background: #9b59b6; } .prop-bg { background: #f1c40f; color: #333; } .mech-bg { background: #e67e22; } .phys-bg { background: #2980b9; }
+       
+.subject-block { margin-top: 30px; padding: 10px; border-radius: 8px; }
+      
+.Statistics-border { border: 3px solid #aac390; } .phys-border { border: 2px solid #2980b9; } .chem-border { border: 2px solid #e74c3c; } 
+      
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+      
+th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+     
+th { background: #f2f2f2; }
+
+          
+          /* زر تحميل الـ PDF */
+.download-link {
+    display: inline-flex;
+    padding: 10px 20px;
+    color: #502424;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(128, 90, 213, 0.2);
+    transition: all 0.2s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+ }
+          
+.download-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(107, 70, 193, 0.4);
+    opacity: 0.95;
+ }
+          
+          /* توافق الشاشات (Responsive) للموبايل */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+         align-items: stretch;
+         }
+    .search-box, .archive-dropdown-box {
+        width: 100%;
+         }
+    main {
+        width: 95%;
+         }
+ }
+          
+</style> 
+    </head>
+    <body>
+        <header>
+            <h1>Commerce Hub</h1>
+            <p>بوابتك التعليمية للمحاضرات والملفات الدراسية</p>
+        </header>
+
+<main>
+
+    <div class="back-navigation">
+        <a href="index.html" class="back-link">⬅️ العودة إلي الصفحة الرئيسية</a>
+    </div>
+
+    <section class="subject-intro-card math-border">
+    <div class="subject-header math-bg">
+        <h2>مادة الأحصاءالوصفي (Descriptive Statistics)</h2>
+        <p>أستاذ المادة: أ.د. مي كاسب</p>
+    </div>
+
+    <div class="subject-body">
+         <p>مرحباً بكم في الصفحة الخاصة بمادة الإحصاء الوصفي. يتم رفع جميع المحاضرات والسكاشن,
+            والملفات الدراسية الهامة هنا اولاً بأول بصيغة PDF لسهولة التحميل و المذاكرة.
+        </p>
+    </div>
+    </section>
+                 <!--قسم الارشيف و البحث بالتاريخ-->
+    <section class="archive-search-section">
+    <div class="search-container">
+    <div class="search-box" style="background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+    margin-bottom: 30px;
+    border-right: 4px solid #c8aa6e;">
+
+        <label for="date-search">البحث عن محاضرة بتاريخ معين:</label>
+        <input type="date" id="date-search" name="lecture-date" class="date-input">
+        <button type="button" class="search-btn">بحث</button>
+    </div>
+
+    </div>
+    </section>
+
+         <!--جدول المحاضرات المرفوعة-->
+         <!-- 1. قسم مادة الاحصاء الوصفي -->
+ <div id="geology-sec" class="subject-block Statistics-border">
+    <div class="subject-block-header stas-bg" style="color: rgb(0, 0, 0); padding: 10px; border-radius: 4px; font-size:25px;">
+        <h3 align="center">جدول المحاضرات المرفوعة</h3>
+        <p></p>
+    </div>
+    <div class="table-responsive">
+    <table>
+    <thead>
+    <tr>
+        <th>رقم المحاضرة</th>
+        <th>عنوان المحاضرة العلمي</th>
+        <th>تاريخ الرفع</th>
+        <th>رابط التحميل المباشر</th>
+    </tr>
+    </thead>   
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>أنواع البيانات</td>
+        <td>2026/10/05</td>
+        <td><a href="احصاء وصفي 3_4.pdf" target="_blank" class="download-link math-bg">تحميل PDF 📥</a></td>
+    </tr>
+                
+    <tr>
+        <td>2</td>
+        <td>مقياس التشتت</td>
+        <td>10/10/2026</td>
+        <td><a href="احصاء 4_3.pdf" target="_blank" class="download-link math-bg">تحميل PDF 📥</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>صورة من اخر محاضرة</td>
+        <td>25/10/2026</td>
+        <td><a href="احصاء_5.pdf" target="_blank" class="download-link math-bg">تحميل PDF 📥</a></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+
+<div id="geology-sec" class="subject-block Statistics-border">
+    <div class="subject-block-header stas-bg" style="color: rgb(0, 0, 0); padding: 10px; border-radius: 4px; font-size:25px;">
+        <h3 align="center">جدول السكاشن المرفوعة</h3>
+        <p></p>
+    </div>
+    <div class="table-responsive">
+        <table>
+    <thead>
+    <tr>
+        <th>رقم السكشن</th>
+        <th>عنوان السكشن العلمي</th>
+        <th>تاريخ الرفع</th>
+        <th>رابط التحميل المباشر</th>
+    </tr>
+    </thead>
+        
+               
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>سكشن اول</td>
+        <td>03/10/2026</td>
+        <td><a href="سكشن 1 احصاء وصفي_16.pdf" target="_blank" class="download-link math-bg">تحميل PDF 📥</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>اسايمنت الأحصاء</td>
+        <td>11/10/2026</td>
+        <td><a href="اسايمنت احصاء_7.pdf" target="_blank" class="download-link math-bg" cl>تحميل PDF 📥</a></td>
+     </tr>
+    <tr>
+        <td>2</td>
+        <td>سكشن تاني</td>
+        <td>15/10/2026</td>
+        <td><a href="سكشن احصاء 2_18.pdf" target="_blank" class="download-link math-bg">تحميل PDF 📥</a></td>
+    </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    
+</main>
+        
+<script>
+    document.querySelector('.search-btn').addEventListener('click', function() {
+     // 1. هنجيب التاريخ اللي اخترتيه من المربع (بيطلع شكله مثلاً: 2026-10-25)
+     const inputVal = document.getElementById('date-search').value;
+                
+     if (!inputVal) {
+       alert('03/10/2026');
+         return;
+ }
+        
+                      // تقطيع التاريخ المختار وتجهيزه
+      const parts = inputVal.split('-'); // هيقسم التاريخ لـ [سنة، شهر، يوم]
+       const searchYear = parts[0];
+        const searchMonth = parts[1];
+        const searchDay = parts[2];
+        
+        const allRows = document.querySelectorAll('.lecture-row');
+        let found = false;
+        
+                  // 2. هنلف على كل سطور الجدول
+           allRows.forEach(row => {
+        const tableDateText = row.querySelector('.lecture-date').textContent.trim();
+                    
+                    // هننظف التاريخ المكتوب في الجدول ونشيل منه أي علامات زي - أو / 
+                    // ونحول الأرقام الهندية (العربي) لأرقام عادية لو موجودة
+                    
+        let cleanTableDate = tableDateText.replace(/[-/]/g, ' '); 
+               // التأكد من أن اليوم والشهر والسنة المختارين موجودين جوة نص تاريخ الجدول
+        if (cleanTableDate.includes(searchDay) && cleanTableDate.includes(searchMonth) && cleanTableDate.includes(searchYear)) {
+            row.style.display = ''; // اظهر الصف لو الأرقام متطابقة
+            found = true;
+         } 
+        else {
+            row.style.display = 'none'; // اخفيه لو مش متطابق
+             }
+         });
+        
+                // 3. لو مفيش حاجة طلعت مطابقة
+        if (!found) {
+            alert('لا توجد محاضرات مرفوعة في هذا التاريخ المحدد.');
+            allRows.forEach(row => row.style.display = ''); // رجع الجدول كله تاني
+         }
+        });
+</script>
+        
+        
+    </body>
+</html>
+       
